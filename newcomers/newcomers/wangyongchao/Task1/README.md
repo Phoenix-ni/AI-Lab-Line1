@@ -1,4 +1,4 @@
-# AI-Lab 准入任务实战通关记录
+<img width="1513" height="946" alt="image" src="https://github.com/user-attachments/assets/43338164-966f-4eb0-857a-fe62d668fff4" /># AI-Lab 准入任务实战通关记录
 
 > 申请人：[你的名字]
 > 日期：2026年10月16日
@@ -21,10 +21,13 @@
 ## 二、 交付物截图
 
 ### 1. IDE/工作台工作界面截图
-![IDE配置截图](此处粘贴你之前带设置面板的截图)
+![IDE配置截图]<img width="1513" height="946" alt="image" src="https://github.com/user-attachments/assets/2a6571f7-b3a6-4ee3-8431-b4ba93271074" />
+
+
 
 ### 2. 终端/CLI协同交互与成功运行截图
-![终端成功运行截图](此处粘贴你刚才这张完美的成功运行截图)
+![终端成功运行截图]<img width="1280" height="800" alt="屏幕截图 2026-10-16 235641" src="https://github.com/user-attachments/assets/a4417283-003a-417c-b58e-441509ac109e" />
+
 
 ## 三、 后续进阶计划
 虽然当前无法申请云端 API，但我已经掌握了利用 Trae 辅助开发、排查终端报错的核心能力。下一步我计划学习 **Ollama**，在本地部署开源小模型（如 Qwen2.5），以彻底打通本地 API 调用的环节。
