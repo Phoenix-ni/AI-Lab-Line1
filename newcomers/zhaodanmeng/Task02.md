@@ -10,7 +10,10 @@
 ## 环境踩坑记录
 - 解决 PowerShell 提示“禁止运行脚本”的权限问题：Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ### 截图
-
+- ![截图](微信图片_20261019234603_21_51.jpg)
+- ![截图](微信图片_20261019234620_22_51.jpg)
+- ![截图](微信图片_20261019234621_23_51.jpg)
 ### 外部参考链接
-- [OpenCode 官方下载与安装指南]
-- (Node.js) 
+- [OpenCode 官方下载与安装指南](https://opencode.ai/zh/download)
+- [Node.js 官网](https://nodejs.org/zh-cn)
+
