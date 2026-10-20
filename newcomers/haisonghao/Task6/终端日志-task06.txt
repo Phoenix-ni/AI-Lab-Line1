@@ -1,0 +1,301 @@
+
+========================== 步骤 0 · 环境信息 ==========================
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+6.18.54.1-microsoft-standard-WSL2
+磁盘剩余空间：
+/dev/sdd       1007G  1.6G  955G   1% /
+
+========================== 步骤 1 · apt 换源到国内镜像（先清华 TUNA，失败回退阿里云） ==========================
+已备份原始源 -> ubuntu.sources.bak-task06
+Get:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute InRelease [136 kB]
+Get:2 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates InRelease [137 kB]
+Get:3 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports InRelease [137 kB]
+Get:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security InRelease [137 kB]
+Get:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 Packages [1480 kB]
+Get:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main Translation-en [524 kB]
+Get:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 Components [395 kB]
+Get:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:9 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:10 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/universe Translation-en [6329 kB]
+Get:11 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:12 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:13 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/restricted amd64 Packages [152 kB]
+Get:14 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/restricted Translation-en [25.8 kB]
+Get:15 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/restricted amd64 Components [556 B]
+Get:16 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/restricted amd64 c-n-f Metadata [388 B]
+Get:17 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:18 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:19 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:20 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:21 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/main amd64 Packages [738 kB]
+Get:22 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/main Translation-en [174 kB]
+Get:23 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/main amd64 Components [110 kB]
+Get:24 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/main amd64 c-n-f Metadata [5756 B]
+Get:25 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/universe amd64 Packages [329 kB]
+Get:26 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/universe Translation-en [108 kB]
+Get:27 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/universe amd64 Components [201 kB]
+Get:28 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/universe amd64 c-n-f Metadata [4704 B]
+Get:29 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/restricted amd64 Packages [508 kB]
+Get:30 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/restricted Translation-en [101 kB]
+Get:31 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/restricted amd64 Components [212 B]
+Get:32 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/restricted amd64 c-n-f Metadata [392 B]
+Get:33 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/multiverse amd64 Packages [21.0 kB]
+Get:34 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/multiverse Translation-en [4168 B]
+Get:35 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:36 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:37 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:38 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:39 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/universe amd64 Packages [3136 B]
+Get:40 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/universe Translation-en [7988 B]
+Get:41 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/universe amd64 Components [1060 B]
+Get:42 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:43 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:44 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:45 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:46 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Get:47 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/main amd64 Packages [602 kB]
+Get:48 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/main Translation-en [139 kB]
+Get:49 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/main amd64 Components [46.7 kB]
+Get:50 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/main amd64 c-n-f Metadata [4616 B]
+Get:51 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/universe amd64 Packages [202 kB]
+Get:52 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/universe Translation-en [65.9 kB]
+Get:53 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/universe amd64 Components [55.6 kB]
+Get:54 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/universe amd64 c-n-f Metadata [3552 B]
+Get:55 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/restricted amd64 Packages [495 kB]
+Get:56 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/restricted Translation-en [99.6 kB]
+Get:57 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/restricted amd64 Components [212 B]
+Get:58 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/restricted amd64 c-n-f Metadata [396 B]
+Get:59 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/multiverse amd64 Packages [20.0 kB]
+Get:60 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/multiverse Translation-en [3728 B]
+Get:61 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:62 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Fetched 34.8 MB in 6s (5704 kB/s)
+Reading package lists...
+
+========================== 步骤 2 · 安装 Docker Engine（Ubuntu 官方仓库 docker.io 包） ==========================
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following additional packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base iptables libip4tc2
+  libip6tc2 libnetfilter-conntrack3 libnfnetlink0 libnftables1 libnftnl11
+  nftables pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools btrfs-progs cgroupfs-mount | cgroup-lite debootstrap
+  docker-buildx docker-compose-v2 docker-doc rinse rootlesskit zfs-fuse
+  | zfsutils firewalld
+The following NEW packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base docker.io iptables
+  libip4tc2 libip6tc2 libnetfilter-conntrack3 libnfnetlink0 libnftables1
+  libnftnl11 nftables pigz runc ubuntu-fan
+0 upgraded, 16 newly installed, 0 to remove and 109 not upgraded.
+Need to get 75.0 MB of archives.
+After this operation, 286 MB of additional disk space will be used.
+Get:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/universe amd64 pigz amd64 2.8-1build1 [66.8 kB]
+Get:2 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 libip4tc2 amd64 1.8.11-2ubuntu3 [24.2 kB]
+Get:3 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 libip6tc2 amd64 1.8.11-2ubuntu3 [24.4 kB]
+Get:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 libnfnetlink0 amd64 1.0.2-3build1 [15.1 kB]
+Get:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 libnetfilter-conntrack3 amd64 1.1.1-1 [47.5 kB]
+Get:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 libnftnl11 amd64 1.3.1-1 [72.3 kB]
+Get:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 iptables amd64 1.8.11-2ubuntu3 [381 kB]
+Get:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 libnftables1 amd64 1.1.6-1 [390 kB]
+Get:9 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 nftables amd64 1.1.6-1 [76.2 kB]
+Get:10 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 bridge-utils amd64 1.7.1-4ubuntu3 [34.5 kB]
+Get:11 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 runc amd64 1.4.0-0ubuntu1 [9828 kB]
+Get:12 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/main amd64 containerd amd64 2.2.2-0ubuntu1.1 [28.1 MB]
+Get:13 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/main amd64 dns-root-data all 2025080400build1 [6022 B]
+Get:14 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/main amd64 dnsmasq-base amd64 2.92-1ubuntu0.5 [439 kB]
+Get:15 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute-updates/universe amd64 docker.io amd64 29.1.3-0ubuntu4.1 [35.5 MB]
+Get:16 https://mirrors.tuna.tsinghua.edu.cn/ubuntu resolute/universe amd64 ubuntu-fan all 0.12.17 [34.3 kB]
+N: Ignoring file 'ubuntu.sources.bak-task06' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+Preconfiguring packages ...
+Fetched 75.0 MB in 9s (8378 kB/s)
+Selecting previously unselected package pigz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 35908 files and directories currently installed.)
+Preparing to unpack .../00-pigz_2.8-1build1_amd64.deb ...
+Unpacking pigz (2.8-1build1) ...
+Selecting previously unselected package libip4tc2:amd64.
+Preparing to unpack .../01-libip4tc2_1.8.11-2ubuntu3_amd64.deb ...
+Unpacking libip4tc2:amd64 (1.8.11-2ubuntu3) ...
+Selecting previously unselected package libip6tc2:amd64.
+Preparing to unpack .../02-libip6tc2_1.8.11-2ubuntu3_amd64.deb ...
+Unpacking libip6tc2:amd64 (1.8.11-2ubuntu3) ...
+Selecting previously unselected package libnfnetlink0:amd64.
+Preparing to unpack .../03-libnfnetlink0_1.0.2-3build1_amd64.deb ...
+Unpacking libnfnetlink0:amd64 (1.0.2-3build1) ...
+Selecting previously unselected package libnetfilter-conntrack3:amd64.
+Preparing to unpack .../04-libnetfilter-conntrack3_1.1.1-1_amd64.deb ...
+Unpacking libnetfilter-conntrack3:amd64 (1.1.1-1) ...
+Selecting previously unselected package libnftnl11:amd64.
+Preparing to unpack .../05-libnftnl11_1.3.1-1_amd64.deb ...
+Unpacking libnftnl11:amd64 (1.3.1-1) ...
+Selecting previously unselected package iptables.
+Preparing to unpack .../06-iptables_1.8.11-2ubuntu3_amd64.deb ...
+Unpacking iptables (1.8.11-2ubuntu3) ...
+Selecting previously unselected package libnftables1:amd64.
+Preparing to unpack .../07-libnftables1_1.1.6-1_amd64.deb ...
+Unpacking libnftables1:amd64 (1.1.6-1) ...
+Selecting previously unselected package nftables.
+Preparing to unpack .../08-nftables_1.1.6-1_amd64.deb ...
+Unpacking nftables (1.1.6-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../09-bridge-utils_1.7.1-4ubuntu3_amd64.deb ...
+Unpacking bridge-utils (1.7.1-4ubuntu3) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../10-runc_1.4.0-0ubuntu1_amd64.deb ...
+Unpacking runc (1.4.0-0ubuntu1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../11-containerd_2.2.2-0ubuntu1.1_amd64.deb ...
+Unpacking containerd (2.2.2-0ubuntu1.1) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../12-dns-root-data_2025080400build1_all.deb ...
+Unpacking dns-root-data (2025080400build1) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../13-dnsmasq-base_2.92-1ubuntu0.5_amd64.deb ...
+Unpacking dnsmasq-base (2.92-1ubuntu0.5) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../14-docker.io_29.1.3-0ubuntu4.1_amd64.deb ...
+Unpacking docker.io (29.1.3-0ubuntu4.1) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../15-ubuntu-fan_0.12.17_all.deb ...
+Unpacking ubuntu-fan (0.12.17) ...
+Setting up libip4tc2:amd64 (1.8.11-2ubuntu3) ...
+Setting up libip6tc2:amd64 (1.8.11-2ubuntu3) ...
+Setting up libnftnl11:amd64 (1.3.1-1) ...
+Setting up runc (1.4.0-0ubuntu1) ...
+Setting up dns-root-data (2025080400build1) ...
+Setting up bridge-utils (1.7.1-4ubuntu3) ...
+Setting up pigz (2.8-1build1) ...
+Setting up libnfnetlink0:amd64 (1.0.2-3build1) ...
+Setting up containerd (2.2.2-0ubuntu1.1) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/containerd.service' → '/usr/lib/systemd/system/containerd.service'.
+Setting up libnftables1:amd64 (1.1.6-1) ...
+Setting up nftables (1.1.6-1) ...
+Setting up libnetfilter-conntrack3:amd64 (1.1.1-1) ...
+Setting up iptables (1.8.11-2ubuntu3) ...
+update-alternatives: using /usr/sbin/iptables-legacy to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-legacy to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/iptables-nft to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-nft to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/arptables-nft to provide /usr/sbin/arptables (arptables) in auto mode
+update-alternatives: using /usr/sbin/ebtables-nft to provide /usr/sbin/ebtables (ebtables) in auto mode
+Setting up docker.io (29.1.3-0ubuntu4.1) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/docker.service' → '/usr/lib/systemd/system/docker.service'.
+Created symlink '/etc/systemd/system/sockets.target.wants/docker.socket' → '/usr/lib/systemd/system/docker.socket'.
+Setting up dnsmasq-base (2.92-1ubuntu0.5) ...
+Setting up ubuntu-fan (0.12.17) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/ubuntu-fan.service' → '/usr/lib/systemd/system/ubuntu-fan.service'.
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+Docker version 29.1.3, build 29.1.3-0ubuntu4.1
+
+========================== 步骤 3 · 启动 Docker 服务 + 配置镜像加速 ==========================
+ Registry Mirrors:
+  https://docker.1ms.run/
+  https://docker.m.daocloud.io/
+  https://docker.1panel.live/
+  https://hub.rat.dev/
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+（已把 haisong 加入 docker 组；重新打开 Ubuntu 终端后可免 sudo 直接用 docker）
+
+========================== 步骤 4 · 拉取基础镜像 python:3.10-slim ==========================
+3.10-slim: Pulling from library/python
+cc1cbe171e30: Pulling fs layer
+79f4247a2db5: Pulling fs layer
+1189ef607cc6: Pulling fs layer
+ecc510c1e359: Pulling fs layer
+554fcc2a04fd: Download complete
+866633192887: Download complete
+cc1cbe171e30: Download complete
+1189ef607cc6: Download complete
+79f4247a2db5: Download complete
+ecc510c1e359: Download complete
+ecc510c1e359: Pull complete
+1189ef607cc6: Pull complete
+cc1cbe171e30: Pull complete
+79f4247a2db5: Pull complete
+Digest: sha256:6ff506466f8b1e981719b468cc0023b8ef000b983cdec0eafe119d01f379e31d
+Status: Downloaded newer image for python:3.10-slim
+docker.io/library/python:3.10-slim
+
+========================== 步骤 5 · 查看本地镜像与容器列表（docker images / docker ps -a） ==========================
+WARNING: This output is designed for human readability. For machine-readable output, please use --format.
+IMAGE              ID             DISK USAGE   CONTENT SIZE   EXTRA
+python:3.10-slim   6ff506466f8b        186MB         47.3MB        
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+========================== 步骤 6 · 挂载目录运行一次性容器（任务指定的原命令） ==========================
+
+got 3 SIGTERM/SIGINTs, forcefully exiting
+
+========================== 步骤 6a · 清理卡住的容器（如有） ==========================
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+（无遗留容器）
+
+========================== 步骤 6b · 挂载目录运行一次性容器（去 -it + 120 秒超时保护） ==========================
+Hello AI-Lab Docker
+>>> 挂载运行成功
+
+========================== 步骤 7 · 容器生命周期演示（run -d / ps / stop / rm） ==========================
+8226f1642227b0d7711f56b64f08fc8086c618284226346885171005467914b8
+CONTAINER ID   IMAGE              COMMAND       CREATED                  STATUS                  PORTS     NAMES
+8226f1642227   python:3.10-slim   "sleep 120"   Less than a second ago   Up Less than a second             task06-demo
+task06-demo
+task06-demo
+--- 删除后的容器列表 ---
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+========================== 步骤 8 · 构建自建镜像（docker build） ==========================
+--- Dockerfile 内容 ---
+# Task 06 最小 Dockerfile：把 app.py 打包成可分发镜像
+# 基础镜像：官方 Python 3.10 精简版（约 45 MB）
+FROM python:3.10-slim
+
+# 容器内工作目录
+WORKDIR /app
+
+# 只复制脚本本身，利用层缓存
+COPY app.py .
+
+# 容器启动时执行的默认命令
+CMD ["python", "app.py"]
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.096kB
+Step 1/4 : FROM python:3.10-slim
+ ---> 6ff506466f8b
+Step 2/4 : WORKDIR /app
+ ---> Running in 471c52b8296f
+ ---> Removed intermediate container 471c52b8296f
+ ---> 5e7817ade173
+Step 3/4 : COPY app.py .
+ ---> 9faa01bd0b17
+Step 4/4 : CMD ["python", "app.py"]
+ ---> Running in c1bfac290177
+ ---> Removed intermediate container c1bfac290177
+ ---> 1363f96d23c1
+Successfully built 1363f96d23c1
+Successfully tagged task06-hello:1.0
+
+========================== 步骤 9 · 运行自建镜像（docker run） ==========================
+Hello AI-Lab Docker
+----------------------------------------
+Python 版本 : 3.10.22
+解释器路径  : /usr/local/bin/python
+操作系统    : Linux 6.18.54.1-microsoft-standard-WSL2
+机器架构    : x86_64
+
+========================== 步骤 10 · 最终状态 ==========================
+WARNING: This output is designed for human readability. For machine-readable output, please use --format.
+IMAGE              ID             DISK USAGE   CONTENT SIZE   EXTRA
+python:3.10-slim   6ff506466f8b        186MB         47.3MB        
+task06-hello:1.0   1363f96d23c1        184MB         45.1MB        
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+========================== 全部完成 ==========================
+完整终端日志: /mnt/e/Task06-提交/终端日志-task06.txt
