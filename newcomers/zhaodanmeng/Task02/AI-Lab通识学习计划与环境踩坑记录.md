@@ -17,10 +17,16 @@
 ## 三、 环境踩坑记录与代码实验
 
 ```bash
-# 1. 解决 npm 下载卡死的问题（切换为国内淘宝镜像源）
+- 1. 解决 npm 下载卡死的问题（切换为国内淘宝镜像源）
 npm config set registry https://registry.npmmirror.com
 
-# 2. 解决 PowerShell 提示“禁止运行脚本”的权限问题
+- 2. 解决 PowerShell 提示“禁止运行脚本”的权限问题
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+## 四
 
-## 四、截图
+
+
+
+
+
