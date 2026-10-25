@@ -24,9 +24,9 @@ npm config set registry https://registry.npmmirror.com
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 ## 四、截图
-![截图1]()
-![截图2]()
-![截图3]()
+![截图1](微信图片_20261019234603_21_51.jpg)
+![截图2](微信图片_20261019234620_22_51.jpg)
+![截图3](微信图片_20261019234621_23_51.jpg)
 
 
 
