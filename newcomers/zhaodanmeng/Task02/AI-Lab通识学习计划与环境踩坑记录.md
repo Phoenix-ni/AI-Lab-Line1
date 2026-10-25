@@ -22,3 +22,5 @@ npm config set registry https://registry.npmmirror.com
 
 # 2. 解决 PowerShell 提示“禁止运行脚本”的权限问题
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+## 四、截图
