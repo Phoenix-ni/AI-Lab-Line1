@@ -20,5 +20,4 @@
 ```
 
 # 截图
-<img width="859" height="409" alt="屏幕截图 2026-10-28 220818" src="https://github.com/user-attachments/assets/756958d2-6f93-4228-8331-e03d119b83e6" />
-
+![截图](屏幕截图 2026-10-28 220818.png)
