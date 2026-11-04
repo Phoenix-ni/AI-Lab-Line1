@@ -31,3 +31,12 @@ Switched to branch 'dome'
 - 在dome分支新建并编写本文档 branch.md，完成后提交
 
 ![alt text](image.png)
+### 4.切回basic/wangting
+```
+git checkout basic/wangting
+```
+### 5.合并分支
+```
+git merge --no-ff dome -m "合并dome分支"
+```
+- --no-ff : 保留分叉节点，禁止快进合并。
