@@ -57,15 +57,47 @@
 - 设置VS Code为Git默认编辑器
 - 完成标准：
 
-![VS Code Git Graph 中的提交历史与分支合并记录](images/task3-1-vscode-git-graph.png)
+![alt text](<屏幕截图 2026-11-04 220148.png>)
 
-![终端中 git log --oneline --graph --decorate --all 的分支图谱](images/task3-2-git-log-graph.png)
+![alt text](<屏幕截图 2026-11-04 212225.png>)
 
 - 踩坑记录：[见「坑 2」](#坑-2关联-task-3)
 
 #### Task 4：Conda 虚拟环境隔离与镜像源加速配置
+1.通过清华镜像网站快速安装Conda，并设置环境变量
+
+2.清华镜像网站的使用帮助配置Conda源
+
+3.创建虚拟环境
+```
+conda create -n PY python=3.10
+```
+4.激活环境
+```
+conda activate PY
+```
+退出环境
+```
+conda deactivate
+```
+
+5.安装包
+```
+conda install 包名
+```
+
+6.导出和复现
+```
+pip freeze > requirements.txt
+pip install -r requirements.txt
+```
 
 - 完成标准:
+  ![alt text](c3aa769af800e119165cc6e5d50959ac.png)
+
+  ![alt text](<屏幕截图 2026-11-05 211001.png>)
+
+  ![alt text](<屏幕截图 2026-11-05 211018.png>)
 
 #### Task 5：Docker 容器化技术初探
 - 完成标准：
