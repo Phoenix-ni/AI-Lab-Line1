@@ -11,5 +11,5 @@
 -                                        └─> --show-sources 找到真凶
 -                                                      └─> 删掉安装目录级配置 ──> ✅ 成功
   
-- ![1](https://github.com/breeze935/AI-Lab-Line1/blob/main/newcomers/zhaodanmeng/task05/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-11-07%20144629.png)
-- ![2](https://github.com/breeze935/AI-Lab-Line1/blob/main/newcomers/zhaodanmeng/task05/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-11-07%20125144.png)
+- ![1](https://github.com/breeze935/AI-Lab-Line1/blob/main/newcomers/zhaodanmeng/task05/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-11-06%20223834.png)
+- ![2](https://github.com/breeze935/AI-Lab-Line1/blob/main/newcomers/zhaodanmeng/task05/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-11-06%20221749.png)
