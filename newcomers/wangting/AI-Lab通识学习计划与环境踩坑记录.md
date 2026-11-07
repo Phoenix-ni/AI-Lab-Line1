@@ -66,6 +66,8 @@
 #### Task 4：Conda 虚拟环境隔离与镜像源加速配置
 1.通过清华镜像网站快速安装Conda，并设置环境变量
 
+https://mirrors.tuna.tsinghua.edu.cn/
+
 2.清华镜像网站的使用帮助配置Conda源
 
 3.创建虚拟环境
@@ -100,8 +102,22 @@ pip install -r requirements.txt
   ![alt text](<屏幕截图 2026-11-05 211018.png>)
 
 #### Task 5：Docker 容器化技术初探
+- 环境准备：安装 Docker Desktop，开启 CPU 虚拟化，后端依赖 WSL2
+- 以 Python 镜像为例：
+  1. 编写 `hello.py`
+  2. 编写 `Dockerfile`（文件名无后缀）
+  3. 在 CMD 中切换到项目目录
+  4. 构建镜像：`docker build -t hello .`
+     - `-t hello`：为镜像指定名称
+     - 末尾的 `.`：以当前目录作为构建上下文
+  5. 运行容器：`docker run --rm hello`
 - 完成标准：
 
+![alt text](<屏幕截图 2026-11-08 000242.png>)
+
+![alt text](<屏幕截图 2026-11-07 231808.png>)
+
+- 踩坑记录：[见「坑 3」](#坑-3关联-task-5)
 #### Task 6：Python 核心语法与常用数据结构
 
 - 完成标准：
@@ -156,3 +172,20 @@ CentOS 7 已停止维护（EOL），原有镜像源逐步下线，教程中的�
 2. 改用 443 端口，连接 `ssh.github.com:443`。
 3. 让 SSH 默认也读到 D 盘的配置：在 `~/.ssh/config` 顶部加一行 `Include D:/git/ssh/config`，使 `git push` / `pull` 走默认路径时也能加载 D 盘的 config 与私钥。
 4. 让 Git 自动带上 `-F`：执行 `git config --global core.sshCommand "ssh -F /d/git/ssh/config"`，此后 git 执行远程操作时会自动使用该配置文件。
+
+### 坑 3（关联 Task 5）
+
+#### 现象
+
+1. Dockerfile 被误命名为 `Dockerfile.txt`，构建时 Docker 无法识别该文件。
+2. 在 Windows CMD 中执行 `cd D:\Docker\docker-lab` 后，提示符仍停留在 C 盘，未真正进入目标目录，后续 `docker build` 找不到 Dockerfile 而构建失败。
+
+#### 原因
+
+1. 资源管理器未开启「文件扩展名」显示，重命名时实际后缀 `.txt` 仍被保留，导致文件名变成了 `Dockerfile.txt`。
+2. CMD 中单独使用 `cd` 只能在同一盘符内切换目录，无法跨盘符跳转；仅写 `cd D:\...` 只是记录了目标路径，并不会切换到 D 盘。
+
+#### 解决方法
+
+1. 在资源管理器顶部「查看」中勾选「文件扩展名」，再将文件重命名为无后缀的 `Dockerfile`。
+2. 使用带 `/d` 参数的 `cd /d D:\Docker\docker-lab` 一步到位跨盘切换；或先执行 `D:` 切换盘符，再 `cd Docker\docker-lab`。
