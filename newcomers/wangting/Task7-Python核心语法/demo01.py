@@ -1,0 +1,19 @@
+nums =[10,20,30,40]
+print(nums)
+#查
+i=nums.index(30)
+print(i)
+#增
+nums.append(60)
+nums.insert(1,15)
+print(nums)
+#改
+nums[2]=22
+print(nums)
+#删
+j=len(nums)
+nums.pop(j-1)
+print(nums)
+#切片
+x=nums[1:3]
+print(x)
