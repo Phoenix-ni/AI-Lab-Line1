@@ -1,0 +1,19 @@
+#集合去重
+list=[1,1,1,2,2,2,3,3,4]
+s1=set(list)
+print(s1)
+#集合交并差集
+s2={3,4,5,6,7}
+print("交集：",s1&s2)
+print("并集：",s1|s2)
+print("差集：",s1-s2)
+#字典
+person={"name":"wang","age":18,"sex":"female"}
+#get
+score=person.get("score","100")
+print(person)
+print(score)
+#字典推导式
+score1={"chinese":99,"math":88,"english":77}
+score2={x:y for x,y in score1.items() if y>90}
+print(score2)
