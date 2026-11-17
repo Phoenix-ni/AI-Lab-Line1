@@ -1,0 +1,37 @@
+{
+  "root": "D:\\git\\Gitfile\\newcomers\\wangting\\Task8-文件读取",
+  "generated_at": "2026-11-17T20:41:08+08:00",
+  "total_files": 4,
+  "totals": {
+    "lines": 32,
+    "chars": 299,
+    "total_chars": 367
+  },
+  "files": [
+    {
+      "file": "samples/edge-no-newline.md",
+      "lines": 3,
+      "chars": 16,
+      "total_chars": 19
+    },
+    {
+      "file": "samples/english.md",
+      "lines": 9,
+      "chars": 96,
+      "total_chars": 123
+    },
+    {
+      "file": "samples/notes/nested.md",
+      "lines": 7,
+      "chars": 67,
+      "total_chars": 77
+    },
+    {
+      "file": "samples/README.md",
+      "lines": 13,
+      "chars": 120,
+      "total_chars": 148
+    }
+  ],
+  "errors": []
+}
