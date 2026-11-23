@@ -1,0 +1,74 @@
+AI-Lab 实训仓库
+ 
+项目简介
+ 
+本仓库是 AI-Lab 实训项目仓库，存放实训各任务的代码、截图、说明文档，完整记录从环境搭建、Markdown笔记、算法刷题、环境核验到PR提交、评审答辩的整套实训流程。
+ 
+仓库目录结构
+ 
+plaintext
+  
+AI-Lab/
+├─ luogu/                # 洛谷刷题代码
+├─ task01/               # Task01 开发工具链与基础环境搭建
+│  ├─ screenshots/       # 验收截图（DSH历史截图、Aider交互截图、API测试截图）
+│  ├─ api_test.py
+│  └─ README.md
+├─ task02/               # Task02 Markdown规范排版与笔记系统练习
+├─ task03/               # Task03 终端基础命令练习
+├─ task04/               # Task04 本地环境自查验证
+├─ task05/               # Task05 GitHub分支 & PR提交
+├─ task06/               # Task06 评审答辩准备
+├─ task07/
+├─ task08/
+├─ task09/
+└─ task10/
+└─ README.md             # 本顶层汇总文档（Task02交付物）
+ 
+ 
+任务进度总览
+ 
+序号 任务名称 预估时长 验收标准 状态 备注 
+1 洛谷刷题基础要求 120min 至少6道精选习题 🟢✅已完成 额外完成P1980加分 
+2 仓库根目录总README.md编写 40min 顶层README汇总task01~task10、目录说明 🟢✅已完成 本文档 
+3 仓库目录规整+清理冗余文件 30min 仓库结构干净，删除临时文件，规范提交记录 🟢✅已完成 清理临时脚本、系统杂项、缓存文件，无单独文档 
+4 本地环境自查验证 30min 验证task01环境、CLI工具可正常运行 🟡🟡进行中 复测Python、Git、Aider、SiliconFlow接口连通 
+5 GitHub分支&PR提交 30min 把所有task交付物提交PR，等待组长评审 🔴未开始 环境核验完成后执行 
+6 评审答辩准备 40min 梳理全部任务，准备代码解释，应对CR提问 🔴未开始 放在最后完成 
+ 
+各任务简要说明
+ 
+Task01 开发工具链与基础环境搭建
+ 
+搭建 VSCode、Python、Git、Node.js 开发环境，部署CLI AI Agent。
+初始方案选用 DSH（自定义profile：chi）并完成全部调试；Windows系统更新重置环境变量，DSH配置丢失无法启动。
+启用备选工具 Aider，配置Aider通过SiliconFlow API调用DeepSeekV3；独立连通测试脚本  api_test.py  使用 Qwen/Qwen2.5-7B-Instruct，验证接口链路。仓库内保留DSH历史截图，留存任务过程记录。
+ 
+Task02 Markdown规范排版与笔记系统搭建
+ 
+练习Markdown语法，学习规范排版，搭建笔记文档体系，用于实训过程的文字记录。
+ 
+Task03 终端基础命令练习
+ 
+学习Windows终端基础操作，掌握目录切换、文件查看等常用终端命令。
+ 
+Task04 本地环境自查验证
+ 
+对Task01整套AI开发环境做复核验证，确认Git、Python、Node、Aider、SiliconFlow API调用链路稳定可用，输出环境核验截图与说明文档。
+ 
+Task05 GitHub分支&PR提交
+ 
+在GitHub创建对应分支，上传仓库全部交付文件，创建Pull Request提交给组长评审。
+ 
+Task06 评审答辩准备
+ 
+梳理实训全部任务流程、踩坑问题、代码逻辑，准备答辩内容，应对评审提问。
+ 
+Task07 ~ Task10：后续实训任务，待后续完成。
+ 
+仓库规范
+ 
+1. 所有正式代码、说明文档、验收截图，分类存放在对应task文件夹；
+2. 已清理临时脚本、系统文件、缓存等冗余文件，仓库保持整洁；
+3. task01中DSH历史截图完整存档，记录任务的完整过程；
+4. 截图统一放在对应任务内的 screenshots 文件夹，方便查阅。
