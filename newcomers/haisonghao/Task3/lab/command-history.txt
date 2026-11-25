@@ -1,0 +1,38 @@
+    1  2026-10-18 10:07:16 xit
+    2  2026-10-18 10:07:16 exit
+    3  2026-10-18 10:19:33 sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.aliyun.com@g' /etc/apt/sources.list && sudo apt update
+    4  2026-10-18 10:22:59 mkdir -p my_task03/project/src my_task03/logs
+    5  2026-10-18 10:22:59 touch project/src/file1.txt project/src/file2.txt project/src/file3.txt
+    6  2026-10-18 10:22:59 for f in project/src/*.txt; do mv "$f" "${f%.txt}.log"; done
+    7  2026-10-18 10:23:49 cd my_task03
+    8  2026-10-18 10:23:49 touch project/src/file1.txt project/src/file2.txt project/src/file3.txt
+    9  2026-10-18 10:23:49 for f in project/src/*.txt; do mv "$f" "${f%.txt}.log"; done
+   10  2026-10-18 10:23:49 ls project/src/
+   11  2026-10-18 10:24:25 echo "INFO: System started
+ERROR: Database connection failed
+INFO: User logged in
+ERROR: Out of memory" > logs/app.log
+   12  2026-10-18 10:24:59 cat logs/app.log | grep "ERROR" > logs/error_only.log
+   13  2026-10-18 10:25:13 cat logs/error_only.log
+   14  2026-10-18 11:15:10 history -a
+   15  2026-10-18 11:16:26 ps aux / df -h / free -m / sleep 300 & + kill %1
+   16  2026-10-18 11:18:56 ps aux | head -10
+   17  2026-10-18 11:18:56 ps aux | grep bash
+   18  2026-10-18 11:18:56 df -h
+   19  2026-10-18 11:18:56 free -m
+   20  2026-10-18 11:18:56 sleep 300 &
+   21  2026-10-18 11:18:56 kill %1
+   22  2026-10-18 11:18:56 ps aux | grep sleep
+   23  2026-10-18 11:28:46 cd ~/my_task03
+   24  2026-10-18 11:28:46 touch secret.txt
+   25  2026-10-18 11:28:46 ls -l secret.txt
+   26  2026-10-18 11:28:46 chmod 600 secret.txt
+   27  2026-10-18 11:28:46 ls -l secret.txt
+   28  2026-10-18 11:29:00 echo '#!/bin/bash' > run.sh
+   29  2026-10-18 11:29:00 echo 'echo hello linux' >> run.sh
+   30  2026-10-18 11:29:00 chmod +x run.sh
+   31  2026-10-18 11:29:00 ls -l run.sh
+   32  2026-10-18 11:29:00 ./run.sh
+   33  2026-10-18 11:29:24 export HISTTIMEFORMAT="%F %T "
+   34  2026-10-18 11:29:24 history -a
+   35  2026-10-18 11:29:24 history > ~/my_task03/command-history.txt
