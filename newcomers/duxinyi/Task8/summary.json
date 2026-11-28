@@ -1,0 +1,17 @@
+{
+  "summary": [
+    {
+      "file": "docs\\test1.md",
+      "lines": 5,
+      "chars": 149
+    },
+    {
+      "file": "docs\\test2.md",
+      "lines": 6,
+      "chars": 39
+    }
+  ],
+  "total_files": 2,
+  "total_lines": 11,
+  "total_chars": 188
+}
